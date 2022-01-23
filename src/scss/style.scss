@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: black;
+  padding: 20px;
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 4rem;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &--mylist {
+    text-transform: uppercase;
+    color: white;
+    margin-left: 5rem;
+    text-decoration: none;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      margin: auto;
+      line-height: 2rem;
+    }
+  }
+
+  &--mylist:hover {
+    background-color: crimson;
+    font-size: 1rem;
+    padding: 35px;
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+}
+
+.header {
+  text-align: center;
+  background-color: #e9ebee;
+  padding: 20px;
+
+  &__h1 {
+    text-transform: uppercase;
+  }
+  &__p {
+    font-weight: bold;
+  }
+}
+
+.container {
+  &__cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__card__all {
+    border: solid 1px #888888;
+    box-shadow: 5px 10px #888888;
+    border-radius: 5px;
+    width: 24%;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 5rem;
+      width: 80%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 5rem;
+      width: 45%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 5rem;
+      width: 24%;
+    }
+  }
+
+  &__pic {
+    background-color: #8d8d8d;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+  }
+  &--p {
+    padding: 2.5rem;
+  }
+
+  &__circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: -1rem;
+  }
+}
